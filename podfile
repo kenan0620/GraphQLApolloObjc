@@ -5,5 +5,7 @@ use_frameworks!
 target 'GraphQLApolloObjc' do
   
   pod 'YYModel'
+  
+  pod 'AFNetworking'
 
 end

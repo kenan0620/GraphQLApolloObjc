@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -44,7 +44,8 @@
 		2702F3172339AEE700642E01 /* Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 2702F2F32339AEE700642E01 /* Field.m */; };
 		2702F3182339AEE700642E01 /* NSDictionary+JSONEncodable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2702F2F82339AEE700642E01 /* NSDictionary+JSONEncodable.m */; };
 		2702F3192339AEE700642E01 /* NetworkTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = 2702F2FD2339AEE700642E01 /* NetworkTransport.m */; };
-		2702F31C2339AF0100642E01 /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 2702F31A2339AF0100642E01 /* API.m */; };
+		2702F31E2339BF6A00642E01 /* Query.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 2702F31D2339BF6A00642E01 /* Query.graphql */; };
+		27B71BF42339E5F700BABAF5 /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B71BF22339E5F700BABAF5 /* API.m */; };
 		CA66A9DF2E3B5A307C216BBD /* Pods_GraphQLApolloObjc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95159C3F626DC93883895E4D /* Pods_GraphQLApolloObjc.framework */; };
 /* End PBXBuildFile section */
 
@@ -142,8 +143,9 @@
 		2702F2FB2339AEE700642E01 /* GraphQLResultNormalizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphQLResultNormalizer.h; sourceTree = "<group>"; };
 		2702F2FC2339AEE700642E01 /* NSHTTPURLResponse+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSHTTPURLResponse+Utilities.h"; sourceTree = "<group>"; };
 		2702F2FD2339AEE700642E01 /* NetworkTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTransport.m; sourceTree = "<group>"; };
-		2702F31A2339AF0100642E01 /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API.m; sourceTree = "<group>"; };
-		2702F31B2339AF0100642E01 /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
+		2702F31D2339BF6A00642E01 /* Query.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Query.graphql; sourceTree = "<group>"; };
+		27B71BF22339E5F700BABAF5 /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API.m; sourceTree = "<group>"; };
+		27B71BF32339E5F700BABAF5 /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
 		2B5AD0A790576D053FAFA846 /* Pods-GraphQLApolloObjc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphQLApolloObjc.debug.xcconfig"; path = "Target Support Files/Pods-GraphQLApolloObjc/Pods-GraphQLApolloObjc.debug.xcconfig"; sourceTree = "<group>"; };
 		6FE004586598566E7CFCA96B /* Pods-GraphQLApolloObjc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphQLApolloObjc.release.xcconfig"; path = "Target Support Files/Pods-GraphQLApolloObjc/Pods-GraphQLApolloObjc.release.xcconfig"; sourceTree = "<group>"; };
 		95159C3F626DC93883895E4D /* Pods_GraphQLApolloObjc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GraphQLApolloObjc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,10 +206,11 @@
 				2702F28F2339AE9B00642E01 /* AppDelegate.m */,
 				2702F2912339AE9B00642E01 /* SceneDelegate.h */,
 				2702F2922339AE9B00642E01 /* SceneDelegate.m */,
-				2702F31B2339AF0100642E01 /* API.h */,
-				2702F31A2339AF0100642E01 /* API.m */,
 				2702F2942339AE9B00642E01 /* ViewController.h */,
 				2702F2952339AE9B00642E01 /* ViewController.m */,
+				27B71BF32339E5F700BABAF5 /* API.h */,
+				27B71BF22339E5F700BABAF5 /* API.m */,
+				2702F31D2339BF6A00642E01 /* Query.graphql */,
 				2702F2C32339AEE700642E01 /* Apollo */,
 				2702F2972339AE9B00642E01 /* Main.storyboard */,
 				2702F29A2339AE9C00642E01 /* Assets.xcassets */,
@@ -307,7 +310,6 @@
 				2B5AD0A790576D053FAFA846 /* Pods-GraphQLApolloObjc.debug.xcconfig */,
 				6FE004586598566E7CFCA96B /* Pods-GraphQLApolloObjc.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -424,6 +426,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2702F31E2339BF6A00642E01 /* Query.graphql in Resources */,
 				2702F29E2339AE9C00642E01 /* LaunchScreen.storyboard in Resources */,
 				2702F29B2339AE9C00642E01 /* Assets.xcassets in Resources */,
 				2702F2992339AE9B00642E01 /* Main.storyboard in Resources */,
@@ -493,7 +496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2702F31C2339AF0100642E01 /* API.m in Sources */,
+				27B71BF42339E5F700BABAF5 /* API.m in Sources */,
 				2702F3132339AEE700642E01 /* JSONStandardTypeConversions.m in Sources */,
 				2702F3082339AEE700642E01 /* NSArray+Map.m in Sources */,
 				2702F3152339AEE700642E01 /* Record.m in Sources */,

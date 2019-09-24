@@ -4,10 +4,11 @@
 @implementation StarshipQuery
 - (NSString *)operationDefinition {
   return [NSString stringWithFormat:
-          @"query Starship {"
-          "  starship(id: 3000) {"
-          "    name"
-          "    coordinates"
+          @"query user1getinfo($uid: ID){"
+          "  user1_getInfo(uid: $uid){"
+          "    uid"
+          "    username"
+          "    registerTime"
           "  }"
           "}"
           ];
@@ -15,6 +16,7 @@
 - (nonnull Class)responseDataClass {
   return NSClassFromString(@"StarshipData");
 }
+
 - (nonnull instancetype)initWith; {
   if (self = [super init]) {
   }
@@ -46,8 +48,10 @@
 
 - (nonnull instancetype)initWithReader:(GraphQLResultReader *_Nullable)reader {
   if (self = [super init]) {
-    NSDictionary *data = [reader valueForField:[[Field alloc] initWithResponseName:@"starship" fieldName:nil arguments:nil]];
+    NSDictionary *data = [reader valueForField:[[Field alloc] initWithResponseName:@"user1_getInfo" fieldName:nil arguments:nil]];
     NSLog(@"1111111%@",data);
+      
+      NSLog(@"data entry %@",reader.dataEntry);
   }
   return self;
 }
